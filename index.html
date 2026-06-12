@@ -564,13 +564,29 @@
                         </div>
                     )}
 
+                    {/* INTERACTIVE TABLE SECTION */}
+                    <div style={{
+                        marginBottom: '48px',
+                        paddingBottom: '32px',
+                        borderBottom: `2px solid ${colors['border']}`
+                    }}>
+                        <h2 style={{
+                            fontSize: '22px',
+                            fontFamily: "'Syne', sans-serif",
+                            fontWeight: '700',
+                            marginBottom: '16px',
+                            color: colors['accent']
+                        }}>
+                            POSITIONS & CONVERGENCE SCORES
+                        </h2>
+
                     {/* TABLE */}
                     <div style={{
                         overflowX: 'auto',
                         border: `1px solid rgba(255, 255, 255, 0.07)`,
                         borderRadius: '20px',
                         background: colors['surface'],
-                        marginBottom: '32px'
+                        marginBottom: '0'
                     }}>
                         <table style={{ 
                             width: '100%',
@@ -891,16 +907,156 @@
                             </tbody>
                         </table>
                     </div>
+                    </div>
+
+                    {/* REFERENCE & STATISTICS SECTION (BOTTOM) */}
+                    <div style={{
+                        paddingTop: '32px'
+                    }}>
+                        <h2 style={{
+                            fontSize: '22px',
+                            fontFamily: "'Syne', sans-serif",
+                            fontWeight: '700',
+                            marginBottom: '24px',
+                            color: colors['muted']
+                        }}>
+                            REFERENCE INFORMATION
+                        </h2>
+
+                        {/* SCORING REFERENCE */}
+                        <div style={{
+                            background: `linear-gradient(135deg, ${colors['surface']} 0%, ${colors['surface2']} 100%)`,
+                            border: `1px solid rgba(232, 255, 71, 0.15)`,
+                            borderRadius: '20px',
+                            padding: '22px',
+                            marginBottom: '24px'
+                        }}>
+                            <h3 style={{ 
+                                color: colors['accent'],
+                                marginBottom: '16px',
+                                fontSize: '12px',
+                                fontWeight: '700',
+                                letterSpacing: '0.15em',
+                                textTransform: 'uppercase'
+                            }}>
+                                QUICK SCORING REFERENCE
+                            </h3>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '16px', fontSize: '11px' }}>
+                                <div>
+                                    <p style={{ color: colors['red'], fontWeight: '700', marginBottom: '6px' }}>25+ MAXIMUM</p>
+                                    <p style={{ color: colors['muted'], fontSize: '10px' }}>80%+ accuracy | Enter large position | Act immediately</p>
+                                </div>
+                                <div>
+                                    <p style={{ color: colors['yellow'], fontWeight: '700', marginBottom: '6px' }}>15-24 HIGH</p>
+                                    <p style={{ color: colors['muted'], fontSize: '10px' }}>60-75% accuracy | Enter medium position | Monitor weekly</p>
+                                </div>
+                                <div>
+                                    <p style={{ color: colors['green'], fontWeight: '700', marginBottom: '6px' }}>10-14 MEDIUM</p>
+                                    <p style={{ color: colors['muted'], fontSize: '10px' }}>50-60% accuracy | Watch closely | Enter on catalyst confirmation</p>
+                                </div>
+                                <div>
+                                    <p style={{ color: colors['muted'], fontWeight: '700', marginBottom: '6px' }}>&lt;10 WEAK</p>
+                                    <p style={{ color: colors['muted'], fontSize: '10px' }}>20-40% accuracy | Reference only | Do NOT enter</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* MACRO CATALYSTS */}
+                        <div style={{
+                            background: `linear-gradient(135deg, rgba(255, 71, 87, 0.08) 0%, rgba(255, 209, 102, 0.08) 100%)`,
+                            border: `1px solid rgba(255, 71, 87, 0.2)`,
+                            borderRadius: '20px',
+                            padding: '22px',
+                            marginBottom: '24px'
+                        }}>
+                            <h3 style={{ 
+                                color: colors['red'],
+                                marginBottom: '16px',
+                                fontSize: '12px',
+                                fontWeight: '700',
+                                letterSpacing: '0.15em',
+                                textTransform: 'uppercase'
+                            }}>
+                                🔴 CRITICAL CATALYSTS (NEXT 30 DAYS)
+                            </h3>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px', fontSize: '11px' }}>
+                                <div style={{ lineHeight: '1.8' }}>
+                                    <p style={{ color: colors['accent'], fontWeight: '700', marginBottom: '8px' }}>⚡ IMMEDIATE ACTIONS</p>
+                                    <p style={{ color: colors['text-primary'] }}>• <strong>VGT Calls:</strong> EXIT on IV 38-42%</p>
+                                    <p style={{ color: colors['text-primary'] }}>• <strong>NVDA:</strong> EXIT June 20-21 (S&P add June 22)</p>
+                                    <p style={{ color: colors['text-primary'] }}>• <strong>SPCX:</strong> DO NOT BUY DAY 1, wait for dump</p>
+                                </div>
+                                <div style={{ lineHeight: '1.8' }}>
+                                    <p style={{ color: colors['green'], fontWeight: '700', marginBottom: '8px' }}>📅 UPCOMING EVENTS</p>
+                                    <p style={{ color: colors['text-primary'] }}>• <strong>NDAA Vote:</strong> June 12-14</p>
+                                    <p style={{ color: colors['text-primary'] }}>• <strong>S&P 500 Add:</strong> NVDA June 22</p>
+                                    <p style={{ color: colors['text-primary'] }}>• <strong>Pentagon AI:</strong> June-July announcement</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* PORTFOLIO ALLOCATION GUIDE */}
+                        <div style={{
+                            background: `linear-gradient(135deg, ${colors['surface']} 0%, ${colors['surface2']} 100%)`,
+                            border: `1px solid rgba(232, 255, 71, 0.15)`,
+                            borderRadius: '20px',
+                            padding: '22px',
+                            marginBottom: '0'
+                        }}>
+                            <h3 style={{ 
+                                color: colors['accent'],
+                                marginBottom: '16px',
+                                fontSize: '12px',
+                                fontWeight: '700',
+                                letterSpacing: '0.15em',
+                                textTransform: 'uppercase'
+                            }}>
+                                PORTFOLIO ALLOCATION GUIDE
+                            </h3>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px', fontSize: '11px' }}>
+                                <div style={{
+                                    background: colors['surface'],
+                                    border: `1px solid ${colors['border']}`,
+                                    borderRadius: '10px',
+                                    padding: '16px'
+                                }}>
+                                    <p style={{ color: colors['red'], fontWeight: '700', marginBottom: '8px' }}>MAXIMUM (25+)</p>
+                                    <p style={{ color: colors['muted'], fontSize: '10px', lineHeight: '1.6' }}>MOH, BAH, ORCL, NVDA, PLTR, MSFT</p>
+                                    <p style={{ color: colors['text-primary'], fontSize: '10px', marginTop: '8px', fontWeight: '700' }}>Size: 4-6% each</p>
+                                </div>
+                                <div style={{
+                                    background: colors['surface'],
+                                    border: `1px solid ${colors['border']}`,
+                                    borderRadius: '10px',
+                                    padding: '16px'
+                                }}>
+                                    <p style={{ color: colors['yellow'], fontWeight: '700', marginBottom: '8px' }}>MEDIUM (15-24)</p>
+                                    <p style={{ color: colors['muted'], fontSize: '10px', lineHeight: '1.6' }}>VGT Calls, GRAB</p>
+                                    <p style={{ color: colors['text-primary'], fontSize: '10px', marginTop: '8px', fontWeight: '700' }}>Size: 2-4% each</p>
+                                </div>
+                                <div style={{
+                                    background: colors['surface'],
+                                    border: `1px solid ${colors['border']}`,
+                                    borderRadius: '10px',
+                                    padding: '16px'
+                                }}>
+                                    <p style={{ color: colors['muted'], fontWeight: '700', marginBottom: '8px' }}>AVOID</p>
+                                    <p style={{ color: colors['muted'], fontSize: '10px', lineHeight: '1.6' }}>SPCX (P&D CRITICAL)</p>
+                                    <p style={{ color: colors['text-primary'], fontSize: '10px', marginTop: '8px', fontWeight: '700' }}>Size: 0%</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     {/* FOOTER */}
                     <div style={{
                         textAlign: 'center',
-                        padding: '16px 20px',
+                        padding: '32px 20px 16px 20px',
                         fontFamily: "'Space Mono', monospace",
                         fontSize: '11px',
                         color: colors['muted'],
                         borderTop: `1px solid ${colors['border']}`,
-                        marginTop: '32px'
+                        marginTop: '48px'
                     }}>
                         <p>Convergence Master Analysis | June 11, 2026 | Max Spector</p>
                     </div>
